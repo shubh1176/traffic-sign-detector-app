@@ -1,0 +1,111 @@
+.settings-container {
+  padding: var(--spacing-md);
+}
+
+.settings-list {
+  background: transparent;
+}
+
+.settings-section {
+  margin-bottom: var(--spacing-xl);
+  animation: slideIn 0.4s ease-out;
+  transition: all 0.3s ease;
+}
+
+.settings-section h2 {
+  color: var(--app-text);
+  font-size: 1.2rem;
+  margin: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
+  font-weight: 600;
+}
+
+ion-item {
+  --background: rgba(255, 255, 255, 0.8);
+  --border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+  animation: fadeIn 0.3s ease-out;
+  transition: all 0.2s ease;
+}
+
+ion-item:hover {
+  --background: rgba(255, 255, 255, 0.9);
+  transform: translateX(4px);
+}
+
+.settings-list ion-item {
+  animation-delay: calc(var(--index) * 100ms);
+}
+
+ion-icon {
+  color: var(--app-primary);
+}
+
+ion-toggle {
+  --background: var(--app-background);
+  --background-checked: var(--app-primary);
+  --handle-background: var(--app-text);
+  --handle-background-checked: white;
+  transition: all 0.3s ease;
+}
+
+ion-toggle::part(track) {
+  transition: all 0.3s ease;
+}
+
+ion-range {
+  --bar-background: var(--app-background);
+  --bar-background-active: var(--app-primary);
+  --knob-background: var(--app-primary);
+  --pin-background: var(--app-primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  ion-item {
+    --background: rgba(30, 30, 30, 0.8);
+  }
+
+  .settings-section {
+    animation: slideInDark 0.4s ease-out;
+  }
+
+  @keyframes slideInDark {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+      background: rgba(0, 0, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+ion-select::part(text) {
+  transition: color 0.3s ease;
+} 

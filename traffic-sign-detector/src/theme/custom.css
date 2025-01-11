@@ -1,0 +1,38 @@
+:root {
+  /* Pastel Color Palette */
+  --app-primary: #A8D5E2;    /* Soft blue */
+  --app-secondary: #F9D5CA;  /* Soft coral */
+  --app-accent: #95B8D1;     /* Muted blue */
+  --app-success: #B8E0D2;    /* Mint green */
+  --app-warning: #FFD3B6;    /* Peach */
+  --app-danger: #FFB4B4;     /* Soft red */
+  --app-background: #F8F9FA; /* Light gray */
+  --app-text: #2D3436;       /* Dark gray */
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-background: #1A1B1E;
+    --app-text: #F8F9FA;
+    --app-primary: #7FA7B8;
+    --app-secondary: #D4A5A5;
+  }
+} 
