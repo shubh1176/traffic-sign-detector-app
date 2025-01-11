@@ -1,4 +1,4 @@
-# Traffic Sign Detection App 🚦
+# Traffic Sign Detection App 
 
 A real-time traffic sign detection application that uses computer vision and deep learning to identify and classify traffic signs through your device's camera.
 
@@ -25,9 +25,3 @@ This mobile application detects and classifies traffic signs in real-time using 
 - Python
 - NumPy
 - Pandas
-
-### Development Tools
-- Vite
-- ESLint
-- Cypress
-- Git
